@@ -6,9 +6,13 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const head = (array) => {
-  return array[0];
-}
+const tail = (array) => {
 
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+  let newArray = array.splice(1);
+  return newArray;
+
+};
+
+let output = tail([]);
+
+assertEqual(output.length, 0);
