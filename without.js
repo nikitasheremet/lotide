@@ -16,15 +16,7 @@ const assertArraysEqual = (actual, expected) => {
 };
 
 const without = (source, itemsToRemove) => {
-  for (a = 0; a < itemsToRemove.length; a++) {  
-    for (i = 0; i < source.length; i++) {
-      if (source[i] === itemsToRemove[a]) {
-        source.splice(i,1);
-        i--;
-      }
-    }
-  } 
-  return source;
+  return source.filter(item => !itemsToRemove.includes(item));
 };
 
 //Test
