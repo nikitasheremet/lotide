@@ -13,10 +13,10 @@ const eqArrays = (array1, array2) => {
         return false;
       }
     }
+    return true;
   } else {
     return false;
   }
-  return true;
 };
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]),true);

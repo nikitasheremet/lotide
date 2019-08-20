@@ -5,14 +5,14 @@ const eqArrays = (array1, array2) => {
         return false;
       }
     }
+    return true;
   } else {
     return false;
   }
-  return true;
 };
 
 const assertArraysEqual = (actual, expected) => {
-  if (actual === expected){
+  if (eqArrays(actual,expected)){
     console.log(`✅✅ ${actual} === ${expected}`);
   } else {
     console.log(`❌❌ ${actual} !== ${expected}`);
