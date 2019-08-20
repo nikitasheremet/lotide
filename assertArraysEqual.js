@@ -6,12 +6,10 @@ const assertArraysEqual = (array1, array2) => {
         return;
       }
     }
+    console.log(`✅✅ ${array1} === ${array2}`);
   } else {
     console.log(`❌❌ ${array1} !== ${array2}`);
-    return;
   }
-  console.log(`✅✅ ${array1} === ${array2}`);
-  return;
 };
 
 assertArraysEqual([1, 2, 3], [1, 2, 3]);
