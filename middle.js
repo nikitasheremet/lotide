@@ -14,7 +14,7 @@ const eqArrays = (array1, array2) => {
 const assertArraysEqual = (actual, expected) => {
   // console.log(actual);
   // console.log(expected);
-  if (eqArrays(actual,expected)){
+  if (eqArrays(actual,expected)) {
     console.log(`✅✅ ${actual} === ${expected}`);
   } else {
     console.log(`❌❌ ${actual} !== ${expected}`);
@@ -22,16 +22,16 @@ const assertArraysEqual = (actual, expected) => {
 };
 
 const middle = (array) => {
-  let pos = Math.floor((array.length/2));
+  let pos = Math.floor((array.length / 2));
   console.log(pos);
   if (array.length <= 2) {
     return [];
   } else if (array.length % 2 === 0) {
-    return array.slice(pos-1,pos + 1);
+    return array.slice(pos - 1, pos + 1);
   } else if (array.length % 2 !== 0) {
-    return array.slice(pos,pos + 1);
+    return array.slice(pos, pos + 1);
   }
-}
+};
 
 //Test
 assertArraysEqual(middle([1]),[]);
