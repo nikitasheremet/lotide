@@ -15,5 +15,19 @@ const assertArraysEqual = (actual, expected) => {
   console.log(eqArrays(actual,expected) ? `✅✅  ${actual} === ${expected}` : `❌❌  ${actual} !== ${expected}`);
 };
 
-assertArraysEqual(eqArrays([1,2,3],[1,2,3]), true);
-assertArraysEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);
+const without = (source, itemsToRemove) => {
+  for (a = 0; a < itemsToRemove.length; a++) {  
+    for (i = 0; i < source.length; i++) {
+      if (source[i] === itemsToRemove[a]) {
+        source.splice(i,1);
+        i--;
+      }
+    }
+  } 
+  return source;
+};
+
+//Test
+
+assertArraysEqual(without([1, 2, 3], [1]),[2, 3]);
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]),["1", "2"]);
