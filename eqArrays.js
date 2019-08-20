@@ -3,16 +3,15 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = (array1, array2) => {
+  output = true;
   if (array1.length === array2.length) {
     for (let i = 0; i < array1.length; i++) {
-      if (array1[i] !== array2[i]) {
-        return false;
+      output = array1[i] !== array2[i] ? false : true;
       }
-    }
-    return true;
-  } else {
-    return false;
+    } else {
+    output = false;
   }
+  return output;
 };
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]),true);
