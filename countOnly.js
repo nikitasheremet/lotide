@@ -7,6 +7,7 @@ const assertEqual = function(actual, expected) {
 const countOnly = (allItems, itemsToCount) => {
   let result = {};
   for (itemCount in itemsToCount) {
+    if (!itemsToCount[itemCount]) continue;
     result[itemCount] = allItems.filter(item => item === itemCount).length;
     if (result[itemCount] === 0) delete result[itemCount];
   }
@@ -25,7 +26,7 @@ const firstNames = [
   "Joe"
 ];
 
-const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true });
+const result1 = countOnly(firstNames, { "Jason": false, "Karima": true, "Fang": true });
 
 assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
