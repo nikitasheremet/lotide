@@ -13,7 +13,7 @@ const eqObjects = (object1, object2) => {
   let output = true;
   if (Object.keys(object1).length !== Object.keys(object2).length) return false;
 
-  for (key in object1) {
+  for (let key in object1) {
     if (typeof object1[key] === "object" ) {
       if (Array.isArray(object1[key])) {
         if (!eqArrays(object1[key],object2[key])) return false;
