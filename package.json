@@ -1,0 +1,22 @@
+{
+  "name": "lotide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikitasheremet/lotide.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikitasheremet/lotide/issues"
+  },
+  "homepage": "https://github.com/nikitasheremet/lotide#readme"
+}
