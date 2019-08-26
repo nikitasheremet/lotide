@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@nikitasher/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "",
+  "description": "Personal clone of Lodash library",
+  "main": "./index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/nikitasheremet/lotide.git"
   },
-  "author": "",
+  "author": "Nikita Sheremet",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nikitasheremet/lotide/issues"
