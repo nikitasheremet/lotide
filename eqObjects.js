@@ -1,13 +1,4 @@
-const assertEqual = function(actual, expected) {
-  console.log(actual === expected ? `✅✅ ${actual} === ${expected}` : `❌❌ ${actual} !== ${expected}`);
-};
-
-const eqArrays = (array1, array2) => {
-  output = true;
-  array1.length === array2.length || (output = false)
-  array1.forEach(element => {if (array2[array1.indexOf(element)] !== element) output =  false});
-  return output;
-};
+const eqArrays = require("./eqArrays");
 
 const eqObjects = (object1, object2) => {
   let output = true;
@@ -26,6 +17,8 @@ const eqObjects = (object1, object2) => {
   }
   return output;
 };
+
+module.exports = eqObjects;
 
 
 // const cd = { c: "1", d: ["2", 3] };

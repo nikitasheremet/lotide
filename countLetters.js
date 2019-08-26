@@ -1,6 +1,4 @@
-const assertEqual = function(actual, expected) {
-  console.log(actual === expected ? `✅✅ ${actual} === ${expected}` : `❌❌ ${actual} !== ${expected}`);
-};
+const assertEqual = require("./assertEqual");
 
 const countLetter = (string) => {
   result = {};
@@ -10,7 +8,8 @@ const countLetter = (string) => {
     result[item] = string.match(regex).length;
   });
   return result;
-}  
+}
 
+module.exports = countLetter;
 
 assertEqual(countLetter("lighthouse in the house").l, 1);
