@@ -1,6 +1,17 @@
-const assertEqual = require("../assertEqual");
 const tail = require("../tail");
+const chai = require("chai")
+const assert = chai.assert;
 
-let output = tail([]);
-assertEqual(tail([]).length, 0);
-assertEqual(tail([1,2,3]).length, 2);
+describe("#tail", function() {
+
+  it ("returns empty array when passed empty array", function() {
+    let arr = [];
+    result = tail(arr);
+    assert.deepEqual(result,[]);
+  })
+  it ("returns array without first value when passed array", function() {
+    let arr = [1,2,3];
+    result = tail(arr);
+    assert.deepEqual(result,[2,3]);
+  })
+});
