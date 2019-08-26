@@ -3,6 +3,4 @@ const assertEqual = function(actual, expected) {
   console.log(actual === expected ? `✅✅ ${actual} === ${expected}` : `❌❌ ${actual} !== ${expected}`);
 };
 
-// TEST CODE
-assertEqual("Bootcamp", "Bootcamp");
-assertEqual(1, 3);
+module.exports = assertEqual;
